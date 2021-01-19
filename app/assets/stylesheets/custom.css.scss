@@ -1,5 +1,10 @@
  @import "semantic-ui";
 
- .chatbox {
-   height: 65vh;
- }
+.chatbox {
+  height: 65vh;
+  }
+
+.messages {
+  height: calc(60vh - 50px);
+  overflow: scroll;
+  }
