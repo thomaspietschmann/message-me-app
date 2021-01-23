@@ -17,9 +17,9 @@ User.create(username: "Italiani", password: "sunshine");
 User.create(username: "Fernando", password: "gorda");
 puts "Done"
 
-30.times do
+3.times do
 Message.create(
-  body: "askfdjwekjhgewgwekjgew",
+  body: "test message",
   user: User.all.sample
 )
 
