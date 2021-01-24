@@ -4,7 +4,6 @@
   height: 65vh;
   }
 
-.messages {
-  height: calc(60vh - 50px);
-  overflow: scroll;
+#messages {
+  overflow: auto;
   }
