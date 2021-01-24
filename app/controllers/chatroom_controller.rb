@@ -3,7 +3,8 @@ before_action :require_user
 
   def index
     @message = Message.new
-    @messages = Message.includes(:user)
+    # @messages = Message.includes(:user).last(5)
+    @messages = Message.includes(:user).custom_display
   end
 
 end

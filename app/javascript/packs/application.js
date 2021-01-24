@@ -16,11 +16,21 @@ require("semantic-ui-sass")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-scroll_bottom = function() {
+scrollBottom = function() {
   if ($("#messages").length > 0) {
     $("#messages").scrollTop($("#messages")[0].scrollHeight);
   }
 }
+
+submitMessage = function() {
+  document.querySelector("#message_body").addEventListener("keydown", (e)=>{
+    if (e.keyCode == 13) {
+      e.preventDefault(); // prevents default submit
+      document.querySelector("button").click();
+      e.target.value = "";
+    };
+  });
+};
 
 $(document).on("turbolinks:load", function() {
   $('.ui.dropdown')
@@ -33,7 +43,8 @@ $(document).on("turbolinks:load", function() {
       .transition('fade')
     ;
   });
-  scroll_bottom();
+  submitMessage();
+  scrollBottom();
 })
 
 
